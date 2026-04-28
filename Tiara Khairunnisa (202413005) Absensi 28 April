@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+    <title>From data Mahasiswa</title>
+    </head>
+    <style>
+        body{
+            font-family: Arial;
+            margin: 40px;
+            background-color: rgb(191, 213, 216);
+        }
+        form {
+            background: rgb(247, 243, 219); 
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        input,textarea,select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+        }
+        button {
+            padding: 10px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-simpan { 
+            background-color: green; /*warna tombol*/
+            color: white; /*warna tulisan*/
+            padding: 10px 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        img {
+            cursor: pointer;
+        }
+        .row { /*wadah barisan*/
+            display: flex;    /* Agar tampilan di dalamnya jadi ke samping */
+            gap: 50px;        /* jarak antar kotak agar tidak nempel */
+            margin-bottom: 15px;
+        }
+        .col { /*wadah ke kolom*/
+            flex: 1;          /* Agar kolom kiri dan kanan lebarnya sama */
+            display: flex;
+            flex-direction: column; /* Agar label tetap di atas input-nya */
+        }
+        .full { /*ini bagian alamat yang sebaris penuh */
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+    </style>
+
+    <body>
+
+    <form id="formMahasiswa">
+        <h1> Manajemen Mahasiswa </h1>
+        <div class="row"> <!-- wadah bagian baris-->
+            <div class="col"> <!--wadah bagian kolom-->
+                <label><strong>NIM</strong></label>
+                <input type="text" placeholder=" Masukkan NIM"> <!--placeholder untuk dalam kotak, ketika di ketik tulisannya hilang-->
+            </div>
+            <div class="col"> <!--kolom dalam baris yang sama-->
+                <label><strong>Nama Lengkap</strong></label>
+                <input type="text" placeholder=" Masukkan Nama Lengkap">
+            </div>
+        </div>
+
+        <div class="row"> <!--buat wadah baris lagi-->
+            <div class="col"> <!-- wadah label kolom-->
+                <label><strong>Alamat</strong></label>
+                <input type="text" placeholder="Masukkan Alamat lengkap">
+            </div>
+        </div>
+
+        <div class="row"> <!--bikin wadah baris lagi-->
+            <div class="col"> <!--wadah kolom-->
+                <label><strong>Jenis Kelamin</strong></label>
+                <select>
+                    <option>-- Pilih Jenis Kelamin --</option>
+                    <option>Laki-laki</option>
+                    <option>Perempuan</option>
+                </select>
+            </div>
+            <div class="col"> <!--kolom-->
+                <label><strong>Password</strong></label>
+                <input type="password" placeholder="Password Anda">
+            </div>
+        </div>
+        <button type="submit" class="btn-simpan">Simpan Data</button> <!--tampilan tombol simpan data-->
+    </form>
+
+    <h2>Data Mahasiswa</h2>
+
+    <table> <!--tabel data yang tersimpan-->
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>JK</th>
+                <th>Password</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    </body>
+</html>
