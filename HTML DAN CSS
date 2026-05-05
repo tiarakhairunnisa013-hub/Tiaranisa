@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <!--Tiara-->
+    <meta charset="UTF-8">
+    <title>Data Mahasiswa Pro</title>
+
+    <!--Nurhidayah-->
+    <style>
+        /* Mengatur tampilan dasar halaman   */
+        body {
+            font-family: 'Segoe UI'; 
+            margin: 20px;
+            background: #96dcf6;
+        }
+
+        /* Container utama agar konten di tengah */
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Styling form */
+        form {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Judul */
+        h2 {
+            color: #333;
+        }
+
+        /* Label form */
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Input, textarea, dan select */
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Group tombol */
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Style tombol umum */
+        button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Hover effect */
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Ukuran icon di tombol */
+        button img {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Warna tombol */
+        .submit-btn { background: #28a745; color: white; }
+        .reset-btn { background: #dc3545; color: white; }
+        .edit-btn { background: #ffc107; color: black; }
+        .delete-btn { background: #dc3545; color: white; }
+
+        /* Styling tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Header tabel */
+        th {
+            background: #333;
+            color: white;
+            padding: 12px;
+        }
+
+        /* Isi tabel */
+        td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        /* Hover baris */
+        tr:hover {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- Judul Form (Mutiara) -->
+    <h2>
+        <img src="img/graduate.png" width="24"> Form Data Mahasiswa
+    </h2>
+
+    <!-- Form Input (Tiara) -->
+    <form>
+        <label>NIM</label>
+        <input type="text" placeholder="Masukkan NIM...">
+
+        <label>Nama Lengkap</label>
+        <input type="text" placeholder="Masukkan Nama...">
+
+        <label>Alamat</label>
+        <textarea></textarea>
+
+        <label>Jenis Kelamin</label>
+        <input type="radio"> Pria
+        <input type="radio"> Wanita
+
+        <!--Memilih data kita seperti tanggal, bulan dan tahun-->
+        <label>Tanggal Lahir</label>
+        <select id="tanggal">
+                    <option value="01">1</option>
+                    <option value="02">2</option>
+                    <option value="03">3</option>
+                    <option value="04">4</option>
+                    <option value="05">5</option>
+                    <option value="06">6</option>
+                    <option value="07">7</option>
+                    <option value="08">8</option>
+                    <option value="09">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>  
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select id="bulan">
+                    <option value="01">Januari</option>
+                    <option value="02">Februari</option>
+                    <option value="03">Maret</option>
+                    <option value="04">April</option>
+                    <option value="05">Mei</option>
+                    <option value="06">Juni</option>
+                    <option value="07">Juli</option>
+                    <option value="08">Agustus</option>
+                    <option value="09">September</option>
+                    <option value="10">Oktober</option>
+                    <option value="11">November</option>
+                    <option value="12">Desember</option>
+                </select>
+                <select id="tahun">
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                    <option value="1994">1994</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                </select>
+
+        <!--Membuat password-->
+        <label>Password</label>
+        <input type="password">
+
+        <!-- Tombol (Mutiara)-->
+        <div class="button-group">
+            <button class="submit-btn">
+                <img src="img/diskette.png"> Simpan Data
+            </button>
+
+            <button class="reset-btn">
+                <img src="img/refresh.png"> Reset
+            </button>
+        </div>
+    </form>
+
+    <!-- Judul Tabel (Mutiara) -->
+    <h2>
+        <img src="img/database.png" width="24"> Database Mahasiswa
+    </h2>
+
+    <!-- Tabel (Mutiara) -->
+    <table>
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>JK</th>
+                <th>TTL</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+
+                <tbody>
+            <tr>
+                <td>202413005</td>
+                <td>Tiara Kharunnisa</td>
+                <td>Salebba</td>
+                <td>Wanita</td>
+                <td>18-04-2006</td>
+                <td>
+                    <button class="edit-btn">
+                        <img src="img/edit.png"> Edit
+                    </button>
+
+                    <button class="delete-btn">
+                        <img src="img/trash.png"> Hapus
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+
+                <tbody>
+            <tr>
+                <td>202413011</td>
+                <td>Nurhidayah</td>
+                <td>Sidrap</td>
+                <td>Wanita</td>
+                <td>22-10-2005</td>
+                <td>
+                    <button class="edit-btn">
+                        <img src="img/edit.png"> Edit
+                    </button>
+
+                    <button class="delete-btn">
+                        <img src="img/trash.png"> Hapus
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+
+        <tbody>
+            <tr>
+                <td>202413012</td>
+                <td>Mutiara Ramadhani</td>
+                <td>Selambai</td>
+                <td>Wanita</td>
+                <td>12-09-2005</td>
+                <td>
+                    <button class="edit-btn">
+                        <img src="img/edit.png"> Edit
+                    </button>
+
+                    <button class="delete-btn">
+                        <img src="img/trash.png"> Hapus
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
